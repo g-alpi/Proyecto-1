@@ -79,7 +79,7 @@ LEFT JOIN partida AS p
     ON f.id_partida = p.idpartida
 GROUP BY p.idpartida, idusuario;
 -- 5 Porcentaje de partidas ganadas Bots en general. Nueva columna "porcentaje %"
-
+select distinct bot.descripcion,partida.ganador_partida, truncate(((2/sum(partida.idpartida))*100),2) as porcentaje from partida inner join participante on partida.ganador_partida=participante.id_participante inner join jugador on participante.id_jugador=jugador.idjugador inner join bot on jugador.idbot=bot.idbot where bot.idbot is not null
 -- 6 Mostrar los datos de los jugadores y el tiempo que han durado sus partidas ganadas cuya puntuación obtenida es mayor que la media puntos de las partidas ganadas totales.
 
 -- 7 Cuántas rondas se ganan en cada partida según el palo. Ejemplo: Partida 1 - 5 rondas - Bastos como carta inicial.
