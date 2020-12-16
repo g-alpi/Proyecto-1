@@ -116,7 +116,7 @@ def usuarios():
 
                 try:
                     numj=int(input('Introduce el numero de jugadores HUMANOS, máximo 8: '))     #preguntamos cuantos jugadores habrá.
-                    if numj != 1 and numj>0 and numj<8 :                                        #nos aseguramos que solo pueda introducir un num entre 2-8
+                    if numj != 1 and numj>0 and numj<=8 :                                        #nos aseguramos que solo pueda introducir un num entre 2-8
                         break
                     else:
                         print(f'No puedes jugar solo o con {numj} jagadores')
@@ -142,7 +142,7 @@ def usuarios():
         while 1==1:
             try:
                 numj=int(input('Introduce el numero de jugadores HUMANOS, máximo 7: ')) #pedimos el numero de los jugadores humanos, bajo ciertas condiciones
-                if  numj > 0 and numj < 8:
+                if  numj >= 0 and numj <=8:
                     break
                 else:
                     print(f'No puedes jugar solo o con {numj} jagadores')
@@ -166,7 +166,7 @@ def usuarios():
         while 1==1:
             try:
                 numb=int(input(f'Con cuantos bots quieres jugar, el máximo de jugadores es {numbmax}: ')) #pedimos con cuantos bots quieres jugar
-                if numb != 1 and numb > 0 and numb < numbmax:                                                  #solo puede introducir x num de bots
+                if numb != 1 and numb > 0 and numb <=numbmax:                                                  #solo puede introducir x num de bots
                     break
                 else:
                     print(f'No puedes introducir {numb} bots')
@@ -481,7 +481,7 @@ def apuestas():
     if conseguido:          #si alguien ha conseguido 7'5 (encaso de empate depende de la prio del juagdor) se elimina de la lista y se introduce de nuevo (por lo tanto se vuelve la banca)
         if len(sieteymedio)!=1:
             min=9 #como hay maximo 8 jugadores no va a haber una prioridad mayor a 9
-            for i in range(sieteymedio):
+            for i in sieteymedio:
                 if sieteymedio[i][1]<min:
                     min=sieteymedio[i][1]
                     minpos=i
@@ -531,14 +531,14 @@ while 1==1:                         #menú para elegir que quieres hacer
             reset_mazo()
             intermedio()
         if not partida:                     #si la partida se ha acabado muestra el ganador
-            print(f'El jugador {ganador} ha ganado')
+            print(f'El jugador {ganador} ha ganado!!\n')
         else:                               #si la partida llega a 30 turnos muestra el jugador con más puntos
             max = 0
             for i in jugador.keys():
                 if jugador[i][6] > max:
                     max = jugador[i][6]
                     ganador = i
-            print(f'El jugador {ganador} ha ganado')
+            print(f'El jugador {ganador} ha ganado!!\n')
     elif opcion==2:
         ############### CONFIGURAR ESTO ###################
 
@@ -563,7 +563,7 @@ while 1==1:                         #menú para elegir que quieres hacer
             "/*11*/select avg(t.apuesta) as 'Media_de_las_apuestas', p.idpartida from turnos t inner join partida p on p.idpartida = t.idpartida group by idpartida;",
             "/*12*/;",
             "/*13*/select count(t.carta_inicial) as 'Num_cartas_iniciales', sum((select valor from cartas where idcartas = t.carta_inicial)) as  'Valor_de_las_cartas', p.idpartida from turnos t inner join partida p on p.idpartida = t.idpartida group by idpartida;",
-            "/*14*/;"
+            "/*14*/SELECT t.idpartida, u.username,(select distinct puntos_inicio from turnos where numero_turno=1) as 'Puntos_ronda_1',puntos_final, puntos_final-20 AS 'diferencia' from usuario u inner join jugador j on u.idusuario = j.idusuario inner join participante p on j.idjugador = p.id_jugador inner join turnos t on p.id_participante = t.idparticipante where numero_turno=5 group by t.idpartida, t.idparticipante order by t.idpartida asc, t.idparticipante asc;"
 
         ]
         outfileName = "Resultadoquery.xml"  #generamos el documento xml

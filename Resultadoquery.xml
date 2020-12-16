@@ -1,0 +1,221 @@
+<?xml version="1.0" ?>
+<mydata>
+  <query>
+    <row>
+       <idparticipante>1</idparticipante>
+       <carta_inicial>3</carta_inicial>
+       <usos>4</usos>
+       <Primera_carta>1</Primera_carta>
+
+    </row>
+    <row>
+       <idparticipante>2</idparticipante>
+       <carta_inicial>5</carta_inicial>
+       <usos>2</usos>
+       <Primera_carta>1</Primera_carta>
+
+    </row>
+    <row>
+       <idparticipante>3</idparticipante>
+       <carta_inicial>2</carta_inicial>
+       <usos>3</usos>
+       <Primera_carta>1</Primera_carta>
+
+    </row>
+    <row>
+       <idparticipante>4</idparticipante>
+       <carta_inicial>4</carta_inicial>
+       <usos>2</usos>
+       <Primera_carta>1</Primera_carta>
+
+    </row>
+    <row>
+       <idparticipante>5</idparticipante>
+       <carta_inicial>38</carta_inicial>
+       <usos>1</usos>
+       <Primera_carta>1</Primera_carta>
+
+    </row>
+    <row>
+       <idparticipante>6</idparticipante>
+       <carta_inicial>18</carta_inicial>
+       <usos>1</usos>
+       <Primera_carta>1</Primera_carta>
+
+    </row>
+    <row>
+       <idparticipante>7</idparticipante>
+       <carta_inicial>14</carta_inicial>
+       <usos>1</usos>
+       <Primera_carta>1</Primera_carta>
+
+    </row>
+  </query>
+  <query>
+    <row>
+       <nombre>Rafa</nombre>
+       <apuesta_max>17.00</apuesta_max>
+       <idpartida>4</idpartida>
+
+    </row>
+  </query>
+  <query>
+    <row>
+       <nombre>Rafa</nombre>
+       <apuesta_min>2.00</apuesta_min>
+       <idpartida>1</idpartida>
+
+    </row>
+    <row>
+       <nombre>Rafa</nombre>
+       <apuesta_min>1.00</apuesta_min>
+       <idpartida>4</idpartida>
+
+    </row>
+    <row>
+       <nombre>Rafa</nombre>
+       <apuesta_min>1.00</apuesta_min>
+       <idpartida>5</idpartida>
+
+    </row>
+    <row>
+       <nombre>Jordi</nombre>
+       <apuesta_min>1.00</apuesta_min>
+       <idpartida>2</idpartida>
+
+    </row>
+    <row>
+       <nombre>BotBeige</nombre>
+       <apuesta_min>1.00</apuesta_min>
+       <idpartida>3</idpartida>
+
+    </row>
+  </query>
+  <query>
+  </query>
+  <query>
+  </query>
+  <query>
+  </query>
+  <query>
+  </query>
+  <query>
+    <row>
+       <contador>5</contador>
+       <idpartida>1</idpartida>
+
+    </row>
+    <row>
+       <contador>13</contador>
+       <idpartida>2</idpartida>
+
+    </row>
+    <row>
+       <contador>16</contador>
+       <idpartida>3</idpartida>
+
+    </row>
+    <row>
+       <contador>16</contador>
+       <idpartida>4</idpartida>
+
+    </row>
+    <row>
+       <contador>16</contador>
+       <idpartida>5</idpartida>
+
+    </row>
+  </query>
+  <query>
+    <row>
+       <Banca>6</Banca>
+       <idpartida>1</idpartida>
+
+    </row>
+    <row>
+       <Banca>19</Banca>
+       <idpartida>2</idpartida>
+
+    </row>
+    <row>
+       <Banca>16</Banca>
+       <idpartida>3</idpartida>
+
+    </row>
+    <row>
+       <Banca>16</Banca>
+       <idpartida>4</idpartida>
+
+    </row>
+    <row>
+       <Banca>16</Banca>
+       <idpartida>5</idpartida>
+
+    </row>
+  </query>
+  <query>
+  </query>
+  <query>
+    <row>
+       <Media_de_las_apuestas>6.312500</Media_de_las_apuestas>
+       <idpartida>1</idpartida>
+
+    </row>
+    <row>
+       <Media_de_las_apuestas>3.027027</Media_de_las_apuestas>
+       <idpartida>2</idpartida>
+
+    </row>
+    <row>
+       <Media_de_las_apuestas>1.250000</Media_de_las_apuestas>
+       <idpartida>3</idpartida>
+
+    </row>
+    <row>
+       <Media_de_las_apuestas>1.250000</Media_de_las_apuestas>
+       <idpartida>4</idpartida>
+
+    </row>
+    <row>
+       <Media_de_las_apuestas>1.250000</Media_de_las_apuestas>
+       <idpartida>5</idpartida>
+
+    </row>
+  </query>
+  <query>
+  </query>
+  <query>
+    <row>
+       <Num_cartas_iniciales>22</Num_cartas_iniciales>
+       <Valor_de_las_cartas>66.00</Valor_de_las_cartas>
+       <idpartida>1</idpartida>
+
+    </row>
+    <row>
+       <Num_cartas_iniciales>56</Num_cartas_iniciales>
+       <Valor_de_las_cartas>151.00</Valor_de_las_cartas>
+       <idpartida>2</idpartida>
+
+    </row>
+    <row>
+       <Num_cartas_iniciales>32</Num_cartas_iniciales>
+       <Valor_de_las_cartas>87.00</Valor_de_las_cartas>
+       <idpartida>3</idpartida>
+
+    </row>
+    <row>
+       <Num_cartas_iniciales>32</Num_cartas_iniciales>
+       <Valor_de_las_cartas>89.00</Valor_de_las_cartas>
+       <idpartida>4</idpartida>
+
+    </row>
+    <row>
+       <Num_cartas_iniciales>32</Num_cartas_iniciales>
+       <Valor_de_las_cartas>86.00</Valor_de_las_cartas>
+       <idpartida>5</idpartida>
+
+    </row>
+  </query>
+  <query>
+  </query>
+</mydata>
