@@ -561,7 +561,7 @@ while 1==1:                         #menú para elegir que quieres hacer
             "/*9*/select count(es_banca) as 'Banca', p.idpartida from turnos t inner join partida p on p.idpartida = t.idpartida where es_banca=1 group by idpartida;",
             "/*10*/;",
             "/*11*/select avg(t.apuesta) as 'Media_de_las_apuestas', p.idpartida from turnos t inner join partida p on p.idpartida = t.idpartida group by idpartida;",
-            "/*12*/;",
+            "/*12*/select distinct u.*,apuesta , max(t.numero_turno) as 'trurno_max', pd.idpartida from usuario u inner join jugador j on u.idusuario = j.idusuario inner join participante p on j.idjugador = p.id_jugador inner join turnos t on p.id_participante = t.idparticipante inner join partida pd on pd.idpartida = t.idpartida group by idpartida,idparticipante -- having numero_turno in  (select max(numero_turno) from turnos group by idpartida) order by t.idpartida asc,idparticipante asc, numero_turno asc;",
             "/*13*/select count(t.carta_inicial) as 'Num_cartas_iniciales', sum((select valor from cartas where idcartas = t.carta_inicial)) as  'Valor_de_las_cartas', p.idpartida from turnos t inner join partida p on p.idpartida = t.idpartida group by idpartida;",
             "/*14*/SELECT t.idpartida, u.username,(select distinct puntos_inicio from turnos where numero_turno=1) as 'Puntos_ronda_1',puntos_final, puntos_final-20 AS 'diferencia' from usuario u inner join jugador j on u.idusuario = j.idusuario inner join participante p on j.idjugador = p.id_jugador inner join turnos t on p.id_participante = t.idparticipante where numero_turno=5 group by t.idpartida, t.idparticipante order by t.idpartida asc, t.idparticipante asc;"
 
