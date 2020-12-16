@@ -1,5 +1,5 @@
 # Proyecto-1
-Guillem Albo (galbopintor.cf@iesesteveterradas.cat),Sandra Bel
+Guillem Albo (galbopintor.cf@iesesteveterradas.cat),Sandra Bel (sbelgil.cf@iesesteveterradas.cat)
 
 Para poder jugar al siete y medio tendremos que tener instalado el programa Python versión 3.7 junto al módulo de pymysql. Del caso contrario no se podrá ejecutar el programa.
 
